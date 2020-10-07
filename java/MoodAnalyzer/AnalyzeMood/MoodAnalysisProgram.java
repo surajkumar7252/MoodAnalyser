@@ -1,6 +1,6 @@
 //SURAJMAL KUMAR
 
-//MOOD ANALYSER PROBLEM. USE CASE 1. SIMPLY PRINTING MOOD.
+//MOOD ANALYSER PROBLEM. USE CASE 2. NullPointerException Handled.
 
 //https://github.com/surajkumar7252/MoodAnalyser.git
 
@@ -12,16 +12,24 @@ import org.apache.logging.log4j.Logger;
 public class MoodAnalysisProgram 
 {
 	static final Logger logger = LogManager.getLogger(MoodAnalysisProgram.class);
-	private String message;
+	private String messagePassed;
 	
 	public MoodAnalysisProgram(String receivedMessage) {
 		
-		message = receivedMessage;
+		messagePassed = receivedMessage;
 	}
 	
 	public String analyseMood() {
 		
-			return message;
+		try {
+			if (messagePassed.contains("SAD")) {
+				return "SAD";
+			} else {
+				return "HAPPY";
+			}
+		} catch (NullPointerException e) {
+			return "HAPPY";
+		}
 		}
 	
 	
