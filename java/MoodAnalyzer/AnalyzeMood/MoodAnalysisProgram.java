@@ -4,7 +4,7 @@
 
 //https://github.com/surajkumar7252/MoodAnalyser.git
 
-package MoodAnalyzer.AnalyzeMood;
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
